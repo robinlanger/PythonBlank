@@ -2,10 +2,10 @@
 A blank repository with a complete python setup 
 
 ## Clone the Repo
-1. git clone --depth 1 <repo-url> neues-projekt
-2. cd neues-projekt
-3. rm -rf .git
-4. git init
+1. ```git clone --depth 1 <repo-url> neues-projekt```
+2. ```cd neues-projekt```
+3. ```rm -rf .git```
+4. ```git init```
 
 ## Prepare the Repo
 1. Clone this Repo.
