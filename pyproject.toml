@@ -1,10 +1,31 @@
 [tool.poetry]
-name = "my_project"
+name = "pythonblank"
 version = "0.1.0"
-description = "A sample Python project"
-authors = ["Your Name <your.email@example.com>"]
+description = "Mein tolles Python-Projekt"
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pythonblank", from = "src"}]
 
-[tool.pytest.ini_options]
-pythonpath = [
-  "src"
-]
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+ruff = "^0.3.4"
+mypy = "^1.8.0"
+pytest = "^8.0.0"
+
+[tool.poetry.scripts]
+start = "pythonblank.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88 
+fix = true  
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]  
+ignore = ["E203", "E501"]  

@@ -1,5 +1,4 @@
 pytest
-flake8
+ruff
 black
 mypy
-isort

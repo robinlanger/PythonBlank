@@ -1,17 +1,14 @@
 install:
-	pip install -r requirements.txt
+	poetry install 
 
 test:
 	pytest
 
 lint:
-	flake8 src tests && black --check src tests && mypy src tests && isort --check-only src tests
+	ruff check src tests && black --check src tests && mypy src tests
 
 format:
-	black src tests && isort src tests
+	black src tests && ruff format src tests
 
 clean:
-	rm -rf __pycache__
-
-run:
-	python3 src/main.py
+	rm -rf __pycache__ .mypy_cache .pytest_cache **/*.pyc .ruff_cache
